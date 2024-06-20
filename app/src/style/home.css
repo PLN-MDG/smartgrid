@@ -1,0 +1,133 @@
+.cover-container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.title-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    filter: sepia(10%) saturate(30%) brightness(50%) hue-rotate(180deg);
+    position: absolute; 
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.title-h1 {
+    font-size: 7em;
+    z-index: 1; 
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.title-p {
+    font-size: 1.5em;
+    z-index: 1; 
+    color: white;
+    text-align: center;
+}
+
+.navigation-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+}
+
+.navigation-container>h3 {
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.navigation-content {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 3em;
+    gap: 2%;
+}
+
+.navigation {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-display {
+    width: 70%;
+    height: 100%;
+    border: 1px solid #EEEEEE;
+    border-radius: 3em;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3%;
+    height: 85%;
+    width: 100%;
+}
+
+.card-2 {
+    height: 100%;
+    width: 50%;
+}
+
+.card-3 {
+    height: 100%;
+    width: 30%;
+}
+
+.item-h1 {
+    color: black;
+}
+
+.navigation button {
+    background-color:  #e7f6f9; 
+    color: #125d72; 
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.navigation button:disabled {
+    background-color: #125d72; 
+    color: #e7f6f9; 
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.button-2 {
+    background-color: #125d72; 
+    color: #e7f6f9; 
+    font-size: 1em;
+}

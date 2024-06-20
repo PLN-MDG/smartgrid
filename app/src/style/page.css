@@ -1,0 +1,79 @@
+.page-banner {
+    width: 100vw;
+    height: 10vw;
+    margin-bottom: 3%;
+    object-fit: cover;
+}
+
+.page-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.page-content {
+    width: 80%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+}
+
+.info-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin: 1% 0;
+}
+
+.info-item-container>img {
+    max-width: 10vw;
+}
+
+.info-item-container h3 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.info-item-container h6 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+.page-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-img {
+    max-height: 50vh;
+    object-fit: contain;
+    align-self: center;
+}
+
+.page-content>h3 {
+    margin: 2% 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.section > h4 {
+    margin-top: 0.5%;
+    font-size: 1.2em;
+}
