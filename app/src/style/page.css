@@ -18,6 +18,11 @@
     width: 80%;
 }
 
+.page-content>h2 {
+    text-align: center;
+    font-size: 1em;
+}
+
 .info-container {
     display: flex;
     flex-direction: row;
@@ -36,18 +41,24 @@
 }
 
 .info-item-container>img {
-    max-width: 10vw;
+    max-height: 10vh;
 }
 
 .info-item-container h3 {
     font-size: 3em;
     font-weight: bold;
     margin: 0;
+    background: linear-gradient(to right, #125d72, #14a2ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .info-item-container h6 {
     font-size: 1.2em;
     font-weight: bold;
+    background: linear-gradient(to right, #125d72, #14a2ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 p {
@@ -68,9 +79,13 @@ p {
 }
 
 .page-content>h3 {
+    width: fit-content;
+    padding: 0.5% 2%;
+    color: white;
     margin: 2% 0;
     font-size: 2em;
     font-weight: bold;
+    background-color: #14a2ba;
 }
 
 .section > h4 {

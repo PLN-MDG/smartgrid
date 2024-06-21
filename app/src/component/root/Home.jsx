@@ -15,6 +15,7 @@ const Home = () => {
   }, []);
 
   const handleChangePage = () => {
+    window.scrollTo(0, 0);
     if (currentNav === 1) {
       navigate('/automated-monitoring-control');
     } else if (currentNav === 2) {

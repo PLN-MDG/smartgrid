@@ -8,6 +8,7 @@ const Header = () => {
     <>
         <div className="header-container">
             <img src='logo.png'/>
+            <h1>SMART GRID</h1>
         </div>
     </>
   );
