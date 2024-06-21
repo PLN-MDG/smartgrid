@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../../style/home.css"
 
 const Home = () => {
   const [currentNav, setCurrentNav] = useState(1);
+  const navigate = useNavigate();
 
   const handleChangePage = () => {
     window.scrollTo(0, 0);
