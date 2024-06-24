@@ -11,7 +11,8 @@
     gap: 2%;
 }
 
-img {
+.header-container>img {
+    max-width: 20vw;
     height: 100%;
     object-fit: contain;
 }
@@ -24,3 +25,10 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media only screen and (max-width: 768px) {
+    .header-container>h1 {
+        font-size: 1em;
+    }
+}
+

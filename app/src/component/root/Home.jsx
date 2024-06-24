@@ -53,6 +53,7 @@ const Home = () => {
         <div>
             <div className="cover-container">
                 <img  className='cover' src="home.gif"/>
+                <div className='tint'></div>
                 <div className='title-container'>
                     <h1 className='title-h1'>PLN's SMART GRID</h1>
                     <p className='title-p'>Discover how our Smart Grid solutions are transforming energy distribution and making a positive impact on communities and businesses alike. Welcome to a brighter, smarter, and more connected world with PLN.</p>
