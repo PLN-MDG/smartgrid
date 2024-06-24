@@ -5,6 +5,23 @@ import "../../style/home.css"
 const Home = () => {
   const [currentNav, setCurrentNav] = useState(1);
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+  const [buttonText, setButtonText] = useState("Automated Monitoring and Control");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleDropdownChange = (event) => {
+    setCurrentNav(Number(event.target.value));
+  };
 
   const handleChangePage = () => {
     window.scrollTo(0, 0);
@@ -25,6 +42,12 @@ const Home = () => {
     }
   }
 
+  const handleItemClick = (text, navId, event) => {
+    event.preventDefault();
+    setButtonText(text);
+    setCurrentNav(navId);
+    };
+
   return (
     <>
         <div>
@@ -39,6 +62,23 @@ const Home = () => {
                 <h3>Explore how we implement SMART GRID in our management</h3>
                 <div className='navigation-content'>
                     <div className='navigation'>
+                    {isMobile ? (
+                        <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             {buttonText}
+                            </button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Automated Monitoring and Control", 1, e)}>Automated Monitoring and Control</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Data Analytics", 2, e)}>Data Analytics</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Supply Reliability", 3, e)}>Supply Reliability</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Distributed Energy Resources Integration", 4, e)}>Distributed Energy Resources Integration</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Green Energy", 5, e)}>Green Energy</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Cyber-Security Measures", 6, e)}>Cyber-Security Measures</a>
+                                <a className="dropdown-item" href="#" onClick={(e) => handleItemClick("Customer Empowerment and Satisfaction", 7, e)}>Customer Empowerment and Satisfaction</a>
+                            </div>
+                        </div>
+                    ) : (
+                        <>
                         <button onClick={() => setCurrentNav(1)} disabled={currentNav === 1}>Automated Monitoring and Control</button>
                         <button onClick={() => setCurrentNav(2)} disabled={currentNav === 2}>Data Analytics</button>
                         <button onClick={() => setCurrentNav(3)} disabled={currentNav === 3}>Supply Reliability</button>
@@ -46,6 +86,8 @@ const Home = () => {
                         <button onClick={() => setCurrentNav(5)} disabled={currentNav === 5}>Green Energy</button>
                         <button onClick={() => setCurrentNav(6)} disabled={currentNav === 6}>Cyber-Security Measures</button>
                         <button onClick={() => setCurrentNav(7)} disabled={currentNav === 7}>Customer Empowerment and Satisfaction</button>
+                        </>
+                    )}
                     </div>
                     <div className='item-display'>
                         {currentNav === 1 && 

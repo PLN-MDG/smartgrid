@@ -133,3 +133,82 @@
     color: #e7f6f9; 
     font-size: 1em;
 }
+
+.dropdown {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    width: 100%;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown > button {
+    background-color: #125d72;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+    animation: fadeInDown 0.3s ease forwards;
+}
+
+@media only screen and (max-width: 768px) {
+    .title-h1 {
+        font-size: 3em;
+    }
+
+    .title-p {
+        font-size: 1em;
+    }
+
+    .navigation-container h3 {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .navigation-content {
+        flex-direction: column;
+    }
+
+    .navigation {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .item-display {
+        width: 100%;
+        padding: 8%;
+    }
+
+    .item-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
