@@ -183,6 +183,10 @@
     animation: fadeInDown 1s ease forwards;
 }
 
+.dropdown-item {
+    overflow: scroll;
+}
+
 @media only screen and (max-width: 768px) {
     .title-h1 {
         font-size: 3em;
