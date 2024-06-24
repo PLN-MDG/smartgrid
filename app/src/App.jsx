@@ -12,14 +12,21 @@ import Header from './component/root/Header';
 import Footer from './component/root/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [currentPage, setCurrentPage] = useState('self');
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-1000px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
 
   return (
     <Router>
       <>
         <Header 
-          id="navbar"
         />
         <Routes>
           <Route path="/" element={<Home />} />
