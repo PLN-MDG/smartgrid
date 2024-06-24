@@ -173,14 +173,14 @@
 .dropdown-menu {
     display: none;
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     height: fit-content;
     width: 100%;
 }
 
 .dropdown-menu.show {
     display: block;
-    animation: fadeInDown 1s ease forwards;
+    animation: fadeInDown 0.5s ease forwards;
 }
 
 .dropdown-item {
